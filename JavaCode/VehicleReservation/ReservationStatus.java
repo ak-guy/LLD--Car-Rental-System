@@ -1,4 +1,4 @@
-package java.Reservation;
+package JavaCode.VehicleReservation;
 
 public enum ReservationStatus {
     

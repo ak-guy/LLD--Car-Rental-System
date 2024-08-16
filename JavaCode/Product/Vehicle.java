@@ -1,4 +1,4 @@
-package java.Product;
+package JavaCode.Product;
 
 import java.util.Date;
 

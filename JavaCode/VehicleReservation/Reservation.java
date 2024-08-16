@@ -1,9 +1,9 @@
-package java.Reservation;
+package JavaCode.VehicleReservation;
 
-import java.Product.Vehicle;
-import java.User.User;
+import JavaCode.Product.Vehicle;
+import JavaCode.User.User;
 import java.util.Date;
-import java.Location;
+import JavaCode.Location;
 
 public class Reservation {
     int reservationID;
@@ -19,22 +19,6 @@ public class Reservation {
     ReservationType reservationType;
     ReservationStatus reservationStatus;
 
-    public Reservation(int reservationID, User user, Vehicle vehicle, Date bookingDate, Date dateBookedFrom,
-            Date dateBookedTo, Long fromTimeStamp, Long toTimeStamp, Location pickLocation, Location dropLocation,
-            ReservationType reservationType, ReservationStatus reservationStatus) {
-        this.reservationID = reservationID;
-        this.user = user;
-        this.vehicle = vehicle;
-        this.bookingDate = bookingDate;
-        this.dateBookedFrom = dateBookedFrom;
-        this.dateBookedTo = dateBookedTo;
-        this.fromTimeStamp = fromTimeStamp;
-        this.toTimeStamp = toTimeStamp;
-        this.pickLocation = pickLocation;
-        this.dropLocation = dropLocation;
-        this.reservationType = reservationType;
-        this.reservationStatus = reservationStatus;
-    }
     
     public Vehicle getVehicle() {
         return vehicle;
@@ -98,5 +82,42 @@ public class Reservation {
 
     public void setDropLocation(Location dropLocation) {
         this.dropLocation = dropLocation;
+    }
+
+    public int getReservationID() {
+        return reservationID;
+    }
+
+    public void setReservationID(int reservationID) {
+        this.reservationID = reservationID;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public ReservationType getReservationType() {
+        return reservationType;
+    }
+
+    public void setReservationType(ReservationType reservationType) {
+        this.reservationType = reservationType;
+    }
+
+    public ReservationStatus getReservationStatus() {
+        return reservationStatus;
+    }
+
+    public void setReservationStatus(ReservationStatus reservationStatus) {
+        this.reservationStatus = reservationStatus;
+    }
+
+    public void print() {
+        System.out.println(this.bookingDate);
+        System.out.println(this.fromTimeStamp);
     }
 }

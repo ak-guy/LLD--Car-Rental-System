@@ -1,4 +1,4 @@
-package java.Product;
+package JavaCode.Product;
 
 public class Car extends Vehicle {
     

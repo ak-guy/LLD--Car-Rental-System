@@ -1,5 +1,8 @@
+package JavaCode.Store;
+
 import java.util.List;
-import java.Product.Vehicle;
+import JavaCode.Product.Vehicle;
+import JavaCode.Product.VehicleType;
 
 public class VehicleInventoryManagement {
     List<Vehicle> vehicles;
@@ -11,7 +14,8 @@ public class VehicleInventoryManagement {
         this.vehicles = vehicles;
     }
 
-    public List<Vehicle> getVehicles(){
+    public List<Vehicle> getVehicles(VehicleType vehicleType){
+        // return list of vehicles based on vehicle Type
         return this.vehicles;
     }
 
