@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.ArrayList;
 import JavaCode.Payment.Bill;
 import JavaCode.Payment.Payment;
+import JavaCode.Payment.PaymentDetail;
+import JavaCode.Payment.PaymentFactory;
 import JavaCode.Payment.PaymentMode;
 import JavaCode.Product.Vehicle;
 import JavaCode.Product.VehicleType;
@@ -36,8 +38,10 @@ public class Main {
         Bill bill = new Bill(reservation);
         
         // paying bill
-        Payment payment = new Payment();
-        payment.payBill(bill, PaymentMode.UPI);
+        PaymentFactory paymentFactoryObj = new PaymentFactory();
+        Payment payment = paymentFactoryObj.getPaymentObject(PaymentMode.CREDITCARD);
+        PaymentDetail paymentDetails = payment.payBill(bill);
+        System.out.println("Payment details " + paymentDetails.toString());
         
         // trip completed, return vehicle and close reservation 
         store.completeReservation(123);
